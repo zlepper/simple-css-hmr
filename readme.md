@@ -46,5 +46,23 @@ var startServer = require('simple-css-hmr/server/server').startServer;
 
 startServer(options);
 ```
-the options object has the following properites:
+the options object has the following properties:
 
+```ts
+interface IOptions {
+    /**
+     * The port to run the simple-css-hmr server on
+     */
+    port: number;
+    /**
+     * Any files or folders to watch
+     */
+    files: string[];
+    /**
+     * If the server should actively push the new css content to the client
+     * or if the client should fetch it themselves. The default client will dynamically
+     * handle this without any additional configuration required.
+     */
+    push: boolean;
+}
+```
