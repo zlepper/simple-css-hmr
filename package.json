@@ -1,8 +1,8 @@
 {
   "name": "simple-css-hmr",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple css hot module reloading without webpack",
+  "main": "dist/main.js",
   "directories": {
     "example": "example"
   },
@@ -11,10 +11,11 @@
     "build-server": "tsc --project server",
     "watch-server": "tsc --watch --project server",
     "build-client": "webpack --config client/webpack.config.ts --progress",
-    "watch-client": "webpack --config client/webpack.config.ts --progress --watch"
+    "watch-client": "webpack --config client/webpack.config.ts --progress --watch",
+    "build": "npm run build-server && npm run build-client"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Zlepper",
+  "license": "MIT",
   "devDependencies": {
     "@types/chokidar": "^1.7.4",
     "@types/command-line-args": "^4.0.2",

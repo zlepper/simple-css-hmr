@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '8'
+script: npm run build
+cache:
+  directories:
+    - "node_modules"
+
+deploy:
+  provider: npm
+  email: hansen13579@gmail.com
+  api_key:
+    secure: NOCsWtBPBWwsVL6EIR15CptMN8nXTPtiWn1HqN45vtsvFyxnaE1qpUlv2/PGdgtlUOCXbymvqw4Be/xcvw1WzVgsuMwbwg0GOsw8pi59KCeB41Wy8TOAts9Qu+7HLO33oPLPiC311zyRNq5CP+7Xfy3RyCtzOb/TlUkP3KgqhD0DUk1+c9wQmBtqPwxD0hwEDBMu+JIgH28UzaY8WcgLn7Wr2X/qihDuF8i6FtDWFxkLLpk+H/qC66FGRiVS6w6fmWdqeo5GTdAgdArbuo2Vy9Hs+PMHCJSOle7Vbv+6xoz6saIWr7s497sxpWL/+kSfwtaKGi+Sqlb5jrsEVBYQrq2qDf++2xPyq/f/5jHrfQ0CZp52oq/fB4VlK9CUhhr3lHUhA5JB0MfqIcIgn78Smr1Kf5inamAAFGGbMm72IQ3axUUq8F9C9N1/evi9byMUrA89PyG9DAr0JygJqbTHqjg8m6XJ2gMvBW0D3/YE/rPtkpeC6wNRjaw+jjkXnQDkX9p9P0Ev9d79h1HJQhdoH6mrvGy/6Z9QGTk6fb6UfgDbTflGE7QBqvChmlE3WmBbgRT90zoclwMuxpulOdVKqPR7evk/u6xAh0Mc5VLe/13Ps4sNhAMhMSvxofHkEMOS8SGWan3w0ditvYw9MRqlUx7i9vXTh92o9I1Hpz5+wgA=
+  on:
+    tags: true
+  skip_cleanup: true
