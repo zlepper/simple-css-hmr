@@ -14,6 +14,9 @@
     "watch-client": "webpack --config client/webpack.config.ts --progress --watch",
     "build": "npm run build-server && npm run build-client"
   },
+  "bin": {
+    "simple-css-hmr": "bin/simple-css-hmr.js"
+  },
   "author": "Zlepper",
   "license": "MIT",
   "devDependencies": {
@@ -22,13 +25,13 @@
     "@types/node": "^9.4.0",
     "@types/ws": "^4.0.0",
     "awesome-typescript-loader": "^3.4.1",
-    "chokidar": "^2.0.0",
     "ts-node": "^4.1.0",
     "typescript": "^2.7.1",
     "webpack": "^3.10.0",
     "webpack-cli": "^2.0.4"
   },
   "dependencies": {
+    "chokidar": "^2.0.0",
     "command-line-args": "^5.0.1",
     "rxjs": "^5.5.6",
     "ws": "^4.0.0"

@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('../server.lib/main').run();
+require('../server-lib/main').run();
