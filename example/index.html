@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link id="replaceable-css-link" rel="stylesheet" href="test.css">
+</head>
+<body>
+
+<div class="block"></div>
+
+<script src="../dist/main.js"></script>
+<script>
+    setupCssHmr({
+        hmrLink: 'ws://localhost:8796',
+        cssLinkTagSelector: '#replaceable-css-link'
+    });
+</script>
+
+</body>
+</html>

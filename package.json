@@ -1,0 +1,35 @@
+{
+  "name": "simple-css-hmr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-server": "tsc --project server",
+    "watch-server": "tsc --watch --project server",
+    "build-client": "webpack --config client/webpack.config.ts --progress",
+    "watch-client": "webpack --config client/webpack.config.ts --progress --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chokidar": "^1.7.4",
+    "@types/command-line-args": "^4.0.2",
+    "@types/node": "^9.4.0",
+    "@types/ws": "^4.0.0",
+    "awesome-typescript-loader": "^3.4.1",
+    "chokidar": "^2.0.0",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.7.1",
+    "webpack": "^3.10.0",
+    "webpack-cli": "^2.0.4"
+  },
+  "dependencies": {
+    "command-line-args": "^5.0.1",
+    "rxjs": "^5.5.6",
+    "ws": "^4.0.0"
+  }
+}
