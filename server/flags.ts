@@ -3,6 +3,7 @@ const optionDefinitions: commandLineArgs.OptionDefinition[] = [
     {name: 'files', alias: 'f', type: String, description: 'The file or directory to watch', multiple: true, defaultOption: true},
     {name: 'push', type: Boolean, description: 'Push file content to websocket', defaultValue: false},
     {name: 'port', type: Number, description: 'The port to host the websocket on', defaultValue: 8796},
+    {name: 'delay', type: Number, description: 'Time to wait before sending refresh signal to browser (in ms)', defaultValue: 0},
 ];
 
 const result = commandLineArgs(optionDefinitions);
@@ -22,6 +23,10 @@ export interface IOptions {
      * handle this without any additional configuration required.
      */
     push: boolean;
+    /**
+     * Time to wait before sending refresh to browser (in ms)
+     */
+    delay: number;
 }
 
 export function getFlags(): IOptions {
