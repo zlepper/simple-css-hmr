@@ -1,6 +1,6 @@
 {
   "name": "simple-css-hmr",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Simple css hot module reloading without webpack",
   "main": "dist/main.js",
   "directories": {
