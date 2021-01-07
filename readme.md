@@ -64,5 +64,9 @@ interface IOptions {
      * handle this without any additional configuration required.
      */
     push: boolean;
+    /**
+     * Time to wait before sending refresh to browser (in ms)
+     */
+    delay: number;
 }
 ```

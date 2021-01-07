@@ -7,6 +7,7 @@ import {readFile} from "fs";
 import {IOptions} from "./flags";
 import 'rxjs/add/operator/filter'
 import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/delay'
 import 'rxjs/add/operator/switchMap'
 
 function setupWatchers(options: IOptions): Observable<string> {
@@ -68,6 +69,7 @@ export function startServer(options: IOptions) {
                 return of({name});
             }
         })
+        .delay(options.delay)
         .subscribe((result) => {
             broadcast(server, JSON.stringify(result));
         });
